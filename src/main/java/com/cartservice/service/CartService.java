@@ -6,6 +6,10 @@ import com.cartservice.model.Cart;
 import java.util.List;
 
 public interface CartService {
-    void addCart(CartDto cartDto);
-    List<Cart> getCartProducts(long customerId);
+    Cart addCart(CartDto cartDto);
+//    List<Cart> getCartProducts(long customerId);
+    List<Cart> getCartProducts(String username);
+    void removeItemFromCart(String cartId);
+    void incrementQtyById(String cartId);
+    void decrementQtyById(String cartId);
 }
